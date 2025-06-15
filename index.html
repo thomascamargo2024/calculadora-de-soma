@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(rgb(255, 153, 0), rgba(252, 252, 252, 0.274));
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .container{
+            background-color: rgba(5, 5, 5, 0.089);
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.295);
+        }
+        input{
+            padding-left: 8px;
+            margin-top: 10px;
+            outline: none;
+            display: block;
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        form{
+           position: absolute;
+           top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #res{
+            text-align: center;
+        }
+        #btn:hover{
+            background-color: rgba(0, 0, 0, 0.24);
+            color: white;
+        }
+
+        #btn{
+            margin-left: 5px;
+            width: 100%;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            outline: none;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #res{
+            margin-top: 10px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Somando dois valores</h1>
+        <form action="#">
+            <input type="text" name="txtn1" id="txtn1" placeholder="Digite o numero"> 
+            <input type="text" name="txtn2" id="txtn2" placeholder="Digite outro numero"> <br>
+            <input type="button" id="btn" value="somar" onclick="somar()">
+            <div id="res">resultado</div>
+        </form>
+    </div>
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+
+            var s = n1 + n2 
+
+            res.innerText = `A soma de ${n1} e ${n2} é igual a ${s}`
+
+        }
+    </script>
+</body>
+</html>
